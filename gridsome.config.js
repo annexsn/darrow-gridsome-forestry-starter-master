@@ -2,8 +2,8 @@
 // Learn more: https://gridsome.org/docs/config
 
 module.exports = {
-  siteName: "Portfolio",
-  siteUrl: `https://www.itsnwa.com`,
+  siteName: "Darrow",
+  siteUrl: `https://confident-williams-393978.netlify.app`,
   host: "0.0.0.0",
   titleTemplate: "%s - NWA",
   siteDescription: "Creative technologist",

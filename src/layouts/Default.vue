@@ -14,6 +14,25 @@ export default {
   components: {
     Header,
     Footer
+  },
+  mounted() {
+    this.theme = localStorage.getItem('theme') || 'theme-light'
+    this.isAuthenticated = this.$auth.isAuthenticated();
+  },
+  data() {
+    return {
+      isOpen: false,
+      theme: '',
+      isAuthenticated: false,
+    }
+  },
+  methods: {
+    toggle() {
+      this.isOpen = !this.isOpen
+    },
+    updateTheme(theme) {
+      this.theme = theme
+    }
   }
 }
 </script>
