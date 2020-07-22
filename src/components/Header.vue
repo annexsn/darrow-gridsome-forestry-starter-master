@@ -19,10 +19,18 @@
 
 <script>
 export default {
+
+    mounted() {
+        this.theme = localStorage.getItem('theme') || 'theme-light'
+        this.isAuthenticated = this.$auth.isAuthenticated();
+    },
   data() {
     return {
         logo: require("../../static/logo.svg"),
-        settings: require("../../data/theme.json")
+        settings: require("../../data/theme.json"),
+        isOpen: false,
+        theme: '',
+        isAuthenticated: false,
     }
   }
 }
