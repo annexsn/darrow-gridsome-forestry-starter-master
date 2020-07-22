@@ -8,6 +8,25 @@
 export default {
   metaInfo: {
     title: 'App'
+  },
+  created() {
+  },
+  mounted() {
+    // redirect to login if not authenticated
+    if (!this.$auth.isAuthenticated()) {
+      this.$auth.login()
+    }
+    this.user = this.$auth.user || {};
+  },
+  data(){
+    return{
+      user: {}
+    }
+  },
+  methods: {
+    logout() {
+      this.$auth.logout();
+    },
   }
 }
 </script>
