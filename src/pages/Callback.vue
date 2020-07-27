@@ -10,7 +10,7 @@ export default {
   mounted() {
     this.$auth.handleAuthentication().then( (data) => {
       console.log("User logging in...")
-      this.$router.push({ path: '/app' })
+      this.$router.push({ path: '/launch' })
     })
   }
 }
